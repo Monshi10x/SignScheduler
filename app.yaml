@@ -1,2 +1,2 @@
 runtime: nodejs22
-instance_class: F4
+env: standard

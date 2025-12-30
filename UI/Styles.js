@@ -42,8 +42,3 @@ const STYLE = {
       Div3: "display: block; box-sizing:border-box;float: left; background-color: white; min-height: 10px; margin: 10px 20px 30px;width: calc(100% - 40px); box-shadow: rgba(0, 0, 0, 0.8) 3px 4px 10px 0px; padding: 0px; accent-color: blue;overflow-y:none;max-height:1800px;",
       Div5: "display: flex;flex-grow: 1; width:100%;box-sizing:border-box;float: left; background-color: white; min-height: 100px; margin: 0px;width: calc(100%); box-shadow: rgba(0, 0, 0, 0.8) 3px 4px 10px 0px; padding: 0px; accent-color: blue;overflow-y:none;max-height:1800px;border:1px solid black;"
 };
-
-document.body.cssText += "flex-grow:1;";
-//background: linear-gradient(145deg, #e6e6e6, #ffffff);
-//box - shadow: 7px 7px 18px #949494,
-//      -7px - 7px 18px #ffffff;

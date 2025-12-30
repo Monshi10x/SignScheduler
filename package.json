@@ -1,17 +1,22 @@
 {
-  "name": "signschedulerserver",
+  "name": "signscheduler",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "gcp-build": "node node_modules/puppeteer/install.mjs"
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  
   "dependencies": {
     "express": "^4.21.1",
     "puppeteer": "^23.6.1"
-  }
+  },
+  "devDependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7",
+    "puppeteer": "^23.6.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
