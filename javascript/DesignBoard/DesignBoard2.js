@@ -1,6 +1,6 @@
 
 window.addEventListener("load", async (event) => {
-      new DesignBoard2(document.body);
+      new DesignBoard2(document.body, "https://signschedulerapp.ts.r.appspot.com");
 });
 
 
@@ -97,8 +97,10 @@ class DesignBoard2 extends JobBoard {
       #f_companyFilter;
       #f_showPaymentsFilter;
 
-      constructor(parentToAppendTo) {
+      constructor(parentToAppendTo, options = {dataURLPath: null}) {
             super(parentToAppendTo);
+
+            this.dataURLPath = options.dataURLPath;
 
             this.Start();
       }
@@ -120,8 +122,9 @@ class DesignBoard2 extends JobBoard {
       }
 
       async LoadJobsData() {
+            if(!this.dataURLPath) throw Error("this.dataURLPath is null");
             console.time("LoadJobsData");
-            let response = await fetch("https://signschedulerapp.ts.r.appspot.com/CB_DesignBoard_Data");
+            let response = await fetch(this.dataURLPath + "/CB_DesignBoard_Data");
             const responseData = await response.json();
             console.log(responseData);
             let data = responseData;
